@@ -1,0 +1,35 @@
+{
+  "name": "weather-app",
+  "version": "1.0.0",
+  "description": "A small weather app using React and Node. This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ideanomo/weather-app.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ideanomo/weather-app/issues"
+  },
+  "homepage": "https://github.com/Ideanomo/weather-app#readme",
+  "dependencies": {
+    "bootstrap": "^4.5.0",
+    "concurrently": "^5.2.0",
+    "config": "^3.3.1",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "jquery": "^3.5.1",
+    "node-fetch": "^2.6.0",
+    "pixi.js": "^5.3.0",
+    "react-router-dom": "^5.2.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4",
+    "prettier": "2.0.5"
+  }
+}
