@@ -1,8 +1,10 @@
 const express = require("express");
 const app = express();
 
-// Require and configure dotenv
+// Configure dotenv
 require('dotenv').config();
+// Load route handlers
+require("./routes")(app);
 
 // Middleware
 app.use(express.urlencoded({extended: true}));
@@ -14,4 +16,3 @@ app.get("/", (req, res) => {
 
 const port = process.env.PORT || "8080";
 app.listen(port, () => console.log(`Listening on port ${port}`));
-
