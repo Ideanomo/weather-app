@@ -1,6 +1,7 @@
 # miscellaneous
 .idea
 package-lock.json
+.env
 
 # dependencies
 /node_modules
