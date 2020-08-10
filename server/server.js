@@ -10,6 +10,9 @@ require("./routes")(app);
 app.use(express.urlencoded({extended: true}));
 app.use(express.json());
 
+// Load API routes
+require("./routes")(app);
+
 app.get("/", (req, res) => {
     res.send("PORT 8080");
 });
