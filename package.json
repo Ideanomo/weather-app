@@ -4,7 +4,7 @@
   "description": "A small weather app using React and Node. This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "mocha -r tests/testhelper.js -R spec tests/**/*.test.js",
     "server": "cd server && nodemon server.js",
     "client": "cd client && npm run start",
     "dev": "concurrently --kill-others-on-fail \"npm run server\" \"npm run client\""
@@ -32,7 +32,11 @@
     "react-router-dom": "^5.2.0"
   },
   "devDependencies": {
+    "chai": "^4.2.0",
     "nodemon": "^2.0.4",
-    "prettier": "2.0.5"
+    "prettier": "2.0.5",
+    "proxyquire": "^2.1.3",
+    "sinon": "^9.0.3",
+    "sinon-chai": "^3.5.0"
   }
 }
