@@ -1,9 +1,10 @@
 import React, { Component } from "react";
 import Search from "./Search";
+import ToggleTemperature from "./ToggleTemperature";
 
 // Weather icons
 import rain from "../assets/icons/rain.png";
-import cloud from "../assets/icons/cloud.png";
+import cloud from "../assets/icons/clouds.png";
 import thunder from "../assets/icons/thunder.png";
 import mist from "../assets/icons/mist.png";
 import clear from "../assets/icons/clear.png";
@@ -31,12 +32,9 @@ class CurrentWeather extends Component {
   }
 
   handleRadioChange = (event) => {
-    this.setState(
-      {
-        degreeType: event.target.value,
-      },
-      () => console.log(this.state)
-    );
+    this.setState({
+      degreeType: event.target.value,
+    });
   };
 
   timestampConverter = (timestamp, isSunriseSunset) => {
@@ -72,7 +70,7 @@ class CurrentWeather extends Component {
     return time;
   };
 
-  // Convert celsius to fahrenhiet
+  // Convert celsius to fahrenheit
   tempConverter = (value) => {
     return Math.round((value * 9) / 5 + 32);
   };
