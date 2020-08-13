@@ -1,19 +1,23 @@
 const fetch = require("node-fetch");
-
+const User = require('../../server');
 let city;
 
 module.exports = (app) => {
     // POST from the search box
     app.post("/city", (req, res) => {
-        city = req.body.city;
-        // console.log("City: ", city);
-
-        // Validate city
-        if(!city || isNaN(city) === false) {
-            res.redirect("/error");
-        } else {
-            res.redirect("/current-weather");
-        }
+        let result = new User.getCity(req.body);
+        result.save()
+            .then(value => {
+                console.log("City: ", value.city);
+                city = value.city;
+                // Validate city
+                if(!city || isNaN(city) === false) {
+                    res.redirect("/error");
+                } else {
+                    res.redirect("/current-weather");
+                }
+            })
+            .catch(err => res.status(400).send("unable to save to database"));
     });
 
     // GET
