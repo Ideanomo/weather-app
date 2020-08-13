@@ -25,7 +25,7 @@ module.exports = (app) => {
         // API url with city name
         const url = "http://api.openweathermap.org/data/2.5/weather?q=";
         const key = process.env.API_KEY; // Pull in key from environment variable
-        const metric = "&units=metric"; // Set to celsius as per openweathermap docs
+        const metric = "&units=metric"; // Set to celsius as per openweatherma:p docs
         const endpoint = url + city + metric + key;
 
         // console.log('endpoint: ', endpoint);
