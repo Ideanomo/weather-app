@@ -1,7 +1,7 @@
 {
   "name": "weather-app",
   "version": "1.0.0",
-  "description": "A small weather app using React and Node. This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
+  "description": "A small weather app using React, Express, Node and MongoDB.",
   "main": "server.js",
   "scripts": {
     "test": "mocha -r tests/testhelper.js -R spec tests/**/*.test.js",

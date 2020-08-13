@@ -1,6 +1,6 @@
 # Weather App
 
-A small weather app using React and Node. This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A small weather app using React, Express, Node and MongoDB..
 
 ### Available Scripts
 
